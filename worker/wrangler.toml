@@ -1,0 +1,20 @@
+name = "badminton-parkville-api"
+main = "src/index.js"
+compatibility_date = "2025-06-01"
+
+[vars]
+# Comma-separated origins allowed to call the API from a browser.
+# Set to your GitHub Pages origin (no path), e.g. https://badminton-parkville.github.io
+# localhost is always allowed for development.
+ALLOWED_ORIGINS = "https://badminton-parkville.github.io"
+
+# Create with: npx wrangler d1 create badminton
+# then paste the returned database_id below.
+[[d1_databases]]
+binding = "DB"
+database_name = "badminton"
+database_id = "e23bfc58-fd2f-42bd-b213-26ce8933aba7"
+
+# The admin password is a secret, never put it here:
+#   npx wrangler secret put ADMIN_PASSWORD
+# For local dev, put ADMIN_PASSWORD=... in worker/.dev.vars (git-ignored).
