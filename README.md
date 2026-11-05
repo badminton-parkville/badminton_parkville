@@ -1,5 +1,12 @@
 # Badminton signups
 
+<a href="https://github.com/badminton-parkville/badminton_parkville">
+    <img src="https://img.shields.io/badge/GitHub-badminton--parkville%2Fbadminton__parkville-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
+</a>
+<a href="https://badminton-parkville.github.io/badminton_parkville/">
+    <img src="https://img.shields.io/badge/Website-badminton--parkville-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Website">
+</a>
+
 A minimal weekly signup page for a badminton session.
 
 - **Attendees** (`index.html`) register each week with name + email and can drop out. They never see their queue position or whether they got a spot; they find out by email.

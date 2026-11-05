@@ -9,6 +9,7 @@ export async function api(path, { method = 'GET', body, token } = {}) {
     res = await fetch(API_BASE + path, {
       method,
       headers,
+      cache: 'no-store', // never reuse a stale (or broken) cached API response
       body: body === undefined ? undefined : JSON.stringify(body),
     });
   } catch {
