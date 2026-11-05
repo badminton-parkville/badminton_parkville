@@ -1,4 +1,4 @@
-name = "badminton-parkville-api"
+name = "api"
 main = "src/index.js"
 compatibility_date = "2025-06-01"
 
@@ -13,7 +13,7 @@ ALLOWED_ORIGINS = "https://badminton-parkville.github.io"
 [[d1_databases]]
 binding = "DB"
 database_name = "badminton"
-database_id = "e23bfc58-fd2f-42bd-b213-26ce8933aba7"
+database_id = "efac6265-5066-421a-afec-abd73c326eac"
 
 # The admin password is a secret, never put it here:
 #   npx wrangler secret put ADMIN_PASSWORD

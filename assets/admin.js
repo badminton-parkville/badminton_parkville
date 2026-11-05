@@ -176,6 +176,9 @@ function buildIcs(s, people) {
     `LOCATION:${icsEscape(s.location)}`,
     `DESCRIPTION:${icsEscape(state.email.body)}`,
   ];
+  // Hidden extra: X- properties are kept in the file but not displayed by calendar apps.
+  const extra = document.querySelector('meta[name="extra"]')?.content;
+  if (extra) lines.push(`X-EXTRA:${icsEscape(extra)}`);
   if (cfg.organiser_email)
     lines.push(`ORGANIZER;CN=${icsEscape(cfg.organiser_name || cfg.organiser_email)}:mailto:${cfg.organiser_email}`);
   for (const p of people)
@@ -829,7 +832,7 @@ document.addEventListener('click', (ev) => {
     }
     case 'ics': {
       const s = state.detail.session;
-      return download(`badminton-${s.starts_at.slice(0, 10)}.ics`, buildIcs(s, recipients()), 'text/calendar');
+      return download(`badminton-${s.starts_at.slice(0, 10)}.ics`, buildIcs(s, recipients()), 'text/calendar;charset=utf-8');
     }
     case 'export-people':
       return downloadCsv('people.csv', state.people.map((p) => ({

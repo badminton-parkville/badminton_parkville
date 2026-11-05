@@ -69,7 +69,7 @@ npx wrangler secret put ADMIN_PASSWORD
 npm run deploy
 ```
 
-The deploy prints a URL like `https://badminton-parkville-api.<you>.workers.dev`.
+The deploy prints a URL like `https://api.<subdomain>.workers.dev`.
 
 ### 2. Frontend (GitHub Pages, in the `badminton-parkville` organisation)
 
